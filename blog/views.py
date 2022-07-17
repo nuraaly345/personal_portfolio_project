@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from . models import Blog
 
 def index(request):
-    blogs = Blog.objects.order_by('-blog_time')[:5]
+    blogs = Blog.objects.order_by('-blog_time')
 
     return render(request, 'blog/index.html', {'blogs': blogs})
 
