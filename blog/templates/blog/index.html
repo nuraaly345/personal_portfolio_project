@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 <h1>Нураалы {{ blogs.count }} блок жазды</h1>
 <!--<h2>Нураалы has writen {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>-->
 
@@ -9,3 +11,5 @@
     <p> {{ blog.blog_time|date:'M d Y'| upper }} </p>
     {{ blog.description|striptags|truncatechars:100}}
 {% endfor %}
+
+{% endblock %}
